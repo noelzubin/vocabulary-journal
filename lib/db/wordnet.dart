@@ -229,7 +229,7 @@ class DBProvider {
   reviseBookmark(int id, SmResponse resp) async {
     final db = await database;
 
-    db.update(
+    await db.update(
         'bookmarks',
         {
           "repetition": resp.repetitions,

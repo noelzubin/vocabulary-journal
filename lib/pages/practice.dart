@@ -211,7 +211,9 @@ class ResponseBtn extends GetView<PracticePageController> {
     return GestureDetector(
         behavior: HitTestBehavior.opaque,
         child: Padding(padding: const EdgeInsets.all(16.0), child: icon),
-        onTap: () => controller.onRevise(controller.onRevise(value)));
+        onTap: () {
+          controller.onRevise(value);
+        });
   }
 }
 
